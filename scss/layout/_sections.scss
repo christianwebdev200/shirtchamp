@@ -38,8 +38,15 @@ $contact-box--primary-color:$color-secondary;
     display: flex;
     width: 100%;
     height: 100%;
+    flex-wrap: wrap;
     &__right {
         justify-content: flex-end;
+    }
+    &__left {
+        justify-content: flex-start;
+    }
+    &__center {
+        align-items: center;
     }
 }
 
@@ -55,7 +62,7 @@ $box-applegreen:#C3FF54;
 $box-darkgreen:#11291C;
 $box-gray:#E0E0E0;
 
-.colors {
+.color {
     display: flex;
     &__item {
         width: 52px;
@@ -90,6 +97,11 @@ $box-gray:#E0E0E0;
     &__choices {
         align-items: center;
         justify-content: center;
+        background: $color-primary;
+        border: 2px solid $color-primary;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
     }
 }
 
@@ -121,12 +133,28 @@ $box-gray:#E0E0E0;
         height: 50px;
         width: 100%;
         border: 2px solid $box-black;
+        position: relative;
         select {
             appearance: none;
             width: 100%;
             height: 100%;
             outline: none;
             padding: 10px;
+        }
+        &:after {
+            width: 0;
+            height: 0;
+            border-top: 5px solid $color-primary;
+            content: '';
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            z-index: 9;
+            display: block;
+            bottom: 0;
+            margin: auto; 
         }
     }
 
@@ -137,6 +165,7 @@ $box-gray:#E0E0E0;
         max-width: 100%;
             border-top: 1px solid #ddd;
             padding-left: 15px;
+            padding-right: 0 !important;
     }
 }
 
@@ -148,6 +177,7 @@ $box-gray:#E0E0E0;
     justify-content: center;
     align-items: flex-end;
     padding: 10px;
+    margin-left: 25px;
     &__amount {
         font-size: 2.5em;
         font-weight: bold;
@@ -181,16 +211,172 @@ $box-gray:#E0E0E0;
     top: 0; 
     left: 0;
     width: 100%;
+    z-index: 2;
 }
 .workspace {
     height: 100%;
+    background: #E5E5E5;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__left {
+        position: absolute;
+        width: 600px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        align-items: flex-start;
+        padding-top: 105px;  
+        padding-left: 10px;
+        display: flex;
+
+        .nav.flex-column {
+            .nav-link {
+                height: 100px;
+                border-radius: 0 !important;
+                text-align: center !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-direction: column;
+                background: $color-white;
+                color: $color-darkblue;
+                
+                .sprite__secondary {
+                    display: none;
+                }
+
+                &.active {
+                    background: $color-primary;
+                    color: $color-white;
+                   
+                    .sprite__secondary {
+                        display:block;
+                    }
+                    .sprite__primary {
+                        display:none;
+                    }
+                }
+                
+            }
+        }
+    }
+    &__main-canvas {
+        height: 85%;
+        min-width: 640px;
+        background: #000;
+        right: -6%;
+        position: relative;
+        background: url('../assets/images/main-canvas.png');
+        background-size: cover;
+        background-position: center;
+        background-size: 100% 100%;
+        background-position: top center;
+    }
+
+    &__right {
+        height: 100%;
+        width: 115px;
+        padding-right: 5px;
+        width: 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__preview-thumbnail {
+        width: 100%;
+        padding-right: 5px;
+    }
+
+    &__preview-item {
+        display: block;
+        text-align: center;
+        background: #fff;
+        padding-bottom: 5px;
+        font-size: .9em;
+       
+        &--active {
+            border-bottom: 4px solid $color-secondary;
+            background: #11291C;
+            color: $color-white;
+           
+        }
+    }
+
+    &__preview-item-box {
+        height: 85px;
+        width: 100%;
+        margin-bottom: 2px;  
+    }
 }
 
-.side-tab {
-    position: absolute;
-    width: 300px;
-    height: 100%;
+
+
+.tab-section {
+    &__content {
+        border: 1px solid $color-primary;
+        padding: 15px;
+        min-width: 450px;
+
+        h2 {
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        button {
+            &.add-text {
+                width: 100%;
+                background: $color-primary;
+                color: $color-white;
+                border: 0;
+                padding:10px;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            label,
+            input {
+                width: 100%;
+            }
+
+            input,textarea {
+                padding:10px;
+            }
+            &--float-right {
+              > label {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                input {
+                    width: 90%;
+                    flex: 0 0 90%;
+                }
+
+                .sprite {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    margin: auto;
+                }
+              }
+            }
+        }
+    }
+    
+    
 }
+
+
 
 .bottom-navigation {
     position: fixed;
@@ -201,17 +387,22 @@ $box-gray:#E0E0E0;
 }
 
 
-.btn {
+.button {
     &--continue {
         height: 100%;
         background: $color-yellow;
         display: flex;
         align-items: center;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 35px;
+        padding-right: 35px;
         text-decoration: none;
         font-weight: bold;
         color: $color-black;
+        display: flex;
+        align-items: center;
+        .sprite {
+            margin-left: 5px;
+        }
     }
 
     &--save {
@@ -222,5 +413,8 @@ $box-gray:#E0E0E0;
             font-weight: bold;
             text-decoration: none;
             height: 50px;
+            .sprite {
+                margin-right: 5px;
+            }
     }
 }

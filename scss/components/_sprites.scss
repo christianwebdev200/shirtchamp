@@ -1,52 +1,119 @@
 
 .sprite {
-    background: url('../assets/images/css_sprites.png') -67px -80px;
+    background: url('../assets/images/css_sprites.png');
     display: block;
 
+
+    &--chat {
+        width: 31px; height: 31px;
+        background-position:-124px -135px;
+    }
+    
+    &--cheveron_right {
+        width: 10px; height: 19px;
+        background-position:-175px -135px;
+    }
+    
+    &--icon_arrowdown {
+        width: 10px; height: 6px;
+        background-position:-264px -10px;
+    }
+    
+    &--icon_bucket {
+        width: 37px; height: 35px;
+        background-position:-10px -80px;
+    }
+    
+    &--icon_crop {
+        width: 25px; height: 35px;
+        background-position:-213px -112px;
+    }
+    
+    &--icon_delete_trash {
+        width: 23px; height: 35px;
+        background-position:-98px -186px;
+    }
+    
+    x
+    &--icon_layered {
+        width: 37px; height: 35px;
+        background-position:-67px -80px;
+    }
+    
+    &--icon_lock {
+        width: 19px; height: 35px;
+        background-position:-182px -186px;
+    }
+    
+    &--icons_dot {
+        width: 6px; height: 30px;
+        background-position:-124px -80px;
+    }
+    
+    &--icon_share {
+        width: 21px; height: 35px;
+        background-position:-141px -186px;
+    }
+    
+    &--icon_sort {
+        width: 34px; height: 35px;
+        background-position:-159px -10px;
+    }
+    
+    &--logo {
+        width: 129px; height: 50px;
+        background-position:-10px -10px;
+        overflow: hidden;
+        text-indent: -999px;
+    }
+    
+    &--save {
+        width: 19px; height: 19px;
+        background-position:-221px -186px;
+    }
     
     &--support {
         width: 31px; height: 31px;
-        background-position: -67px -80px;
+        background-position:-213px -10px;
     }
-
-    &--text {
-        width: 24px; height: 27px;
-        background-position: -10px -131px;
-    }
-
-    &--chat {
-        width: 31px; height: 31px;  
-        background-position:-159px -10px;
-    }
- 
-    &--cheveron_right {
-        width: 10px; height: 19px;
-        background-position: -54px -131px;
-    }
-    &--clipart {
-        width: 37px; height: 31px;
-        background-position: -10px -80px;
-    }
-
-    &--icons {
-        width: 6px; height: 30px;
-        background-position:-210px -10px;
-    }
-
-    &--image {
+    
+    &--white_icon_image {
         width: 31px; height: 31px;
-        background-position: -159px -61px;
+        background-position:-213px -61px;
     }
+    
+    &--white_icons_clipart {
+        width: 37px; height: 31px;
+        background-position:-67px -135px;
+    }
+    
+    &--white_icon_text {
+        width: 24px; height: 35px;
+        background-position:-54px -186px;
+    }
+    &--blue_icon_image {
+        width: 31px; 
+        height: 31px;
+        background-position:-159px -65px;
+    }
+    
+    &--blue_icons_clipart {
+        width: 37px; 
+        height: 31px;
+        background-position:-10px -135px;
+    }
+    
+    &--blue_icon_text {
+        width: 24px; height: 35px;
+        background-position:-10px -186px;
+    }
+    
 
-    &--logo {
-        width: 129px; height: 50px;
-        background-position:  -10px -10px;
-        text-indent: -9999px;
-    overflow: hidden;
-    }
 
-    &--save {
-        width: 19px; height: 19px;
-        background-position: -118px -80px;
-    }
+    
 }
+
+
+
+
+

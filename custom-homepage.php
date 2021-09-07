@@ -3,25 +3,46 @@
 
 <?php $headTitle = "Builder Homepage - Choose Category"; include('./components/layouts/Header.php'); ?>
 
-
 <body>
 
 
    
     <header class="header-custom">
             <?php include('.//components/layouts/header-custom.php'); ?>
+
+
     </header>
 
 
     <main class="main-wrapper">
 
     
-        <section class="side-tab">
-            <?php include('.//components/layouts/tab-section.php'); ?>
-        </section>
+      
 
         <section class="workspace">
-            test
+
+            <div class="workspace__left">
+                <?php include('.//components/layouts/tab-section.php'); ?>
+            </div>
+
+            <div class="workspace__main-canvas">
+                canvas
+            </div>
+
+            <div class="workspace__right">
+               <div class="workspace__preview-thumbnail">
+                        <div class="workspace__preview-item workspace__preview-item--active"> 
+                            <div class="workspace__preview-item-box"><img src="assets/images/front_large.png"/></div>
+                            Front
+                        </div>
+                        <div class="workspace__preview-item"> 
+                            <div class="workspace__preview-item-box"><img src="assets/images/back_large.png"/></div>
+                            Back
+                        </div>
+               </div>
+            </div>
+
+            
         </section>
 
         
@@ -35,11 +56,9 @@
 
 
 
-
-
-<script src="../scripts/bootstrap.min.js"> </script>
 <?php include('./scripts/index-scripts.php'); ?>
+<script src="assets/js/bootstrap.min.js"> </script>
 
-<?php include('./components/layouts/Footer.php'); ?>
+
 
 </html>
