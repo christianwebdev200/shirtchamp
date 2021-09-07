@@ -1,0 +1,52 @@
+
+.sprite {
+    background: url('../assets/images/css_sprites.png') -67px -80px;
+    display: block;
+
+    
+    &--support {
+        width: 31px; height: 31px;
+        background-position: -67px -80px;
+    }
+
+    &--text {
+        width: 24px; height: 27px;
+        background-position: -10px -131px;
+    }
+
+    &--chat {
+        width: 31px; height: 31px;  
+        background-position:-159px -10px;
+    }
+ 
+    &--cheveron_right {
+        width: 10px; height: 19px;
+        background-position: -54px -131px;
+    }
+    &--clipart {
+        width: 37px; height: 31px;
+        background-position: -10px -80px;
+    }
+
+    &--icons {
+        width: 6px; height: 30px;
+        background-position:-210px -10px;
+    }
+
+    &--image {
+        width: 31px; height: 31px;
+        background-position: -159px -61px;
+    }
+
+    &--logo {
+        width: 129px; height: 50px;
+        background-position:  -10px -10px;
+        text-indent: -9999px;
+    overflow: hidden;
+    }
+
+    &--save {
+        width: 19px; height: 19px;
+        background-position: -118px -80px;
+    }
+}
