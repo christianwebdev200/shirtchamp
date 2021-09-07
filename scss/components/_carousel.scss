@@ -1,0 +1,38 @@
+.builder-carousel {
+    display: block;
+    position: relative;
+    height: 416px;
+    min-height: 416px;
+    width: 100%;
+    &__wrapper {
+
+    }
+
+    &__slide {
+
+    }
+
+    &__link {
+
+    }
+
+    &__pagination {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        z-index: 2;
+
+        .swiper-pagination-bullet {
+            height: 12px !important;
+            width: 12px !important;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+
+        }
+    }
+}
