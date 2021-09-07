@@ -1,0 +1,26 @@
+.category-rows {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+//   margin-left: -15px !important;
+//   margin-right: -15px !important;
+  justify-content: center;
+}
+
+.category-col {
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  min-height: 1px;
+  margin-top: 30px;
+
+  &--big {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  &--small {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
