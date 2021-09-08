@@ -25,6 +25,10 @@
                 <?php include('.//components/layouts/tab-section.php'); ?>
             </div>
 
+            <div class="workspace__top-navigation">
+                <?php include('.//components/layouts/top-navigation.php'); ?>
+            </div>
+
             <div class="workspace__main-canvas">
                 canvas
             </div>

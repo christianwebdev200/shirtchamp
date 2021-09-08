@@ -221,6 +221,17 @@ $box-gray:#E0E0E0;
     align-items: center;
     justify-content: center;
 
+   &__top-navigation {
+        position: absolute;
+        background:$color-white;
+        max-width: 70%;
+        top: 90px;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
     &__left {
         position: absolute;
         width: 600px;
@@ -228,7 +239,7 @@ $box-gray:#E0E0E0;
         left: 0;
         top: 0;
         align-items: flex-start;
-        padding-top: 105px;  
+        padding-top: 202px;
         padding-left: 10px;
         display: flex;
 
@@ -319,11 +330,35 @@ $box-gray:#E0E0E0;
 
 
 
+.top-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+   &__item {
+        a {
+            min-width: 70px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: .8em;
+            padding: 10px 0;
+            color: #6C7582;
+            text-decoration: none;
+        }
+    }
+}
+
+
 .tab-section {
     &__content {
         border: 1px solid $color-primary;
         padding: 15px;
         min-width: 450px;
+        background: $color-white;
 
         h2 {
             font-size: 1.5em;
@@ -371,6 +406,15 @@ $box-gray:#E0E0E0;
               }
             }
         }
+
+        .divider {
+            height: 1px;
+            width: 100%;
+            clear: both;
+            display: block;
+            margin: 35px 0;
+            background: #ddd;
+        }
     }
     
     
@@ -386,35 +430,3 @@ $box-gray:#E0E0E0;
     left: left;
 }
 
-
-.button {
-    &--continue {
-        height: 100%;
-        background: $color-yellow;
-        display: flex;
-        align-items: center;
-        padding-left: 35px;
-        padding-right: 35px;
-        text-decoration: none;
-        font-weight: bold;
-        color: $color-black;
-        display: flex;
-        align-items: center;
-        .sprite {
-            margin-left: 5px;
-        }
-    }
-
-    &--save {
-            background: $color-blue;
-            display: flex;
-            padding: 14px 25px;
-            color: $color-white;
-            font-weight: bold;
-            text-decoration: none;
-            height: 50px;
-            .sprite {
-                margin-right: 5px;
-            }
-    }
-}
